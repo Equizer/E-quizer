@@ -1,0 +1,137 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+
+a {
+  text-decoration: none !important;
+}
+
+.vertical-line {
+  position: absolute;
+  display: inline-block;
+  width: 5px;
+  height: 168px;
+  background-color: rgb(0, 0, 0);
+}
+h1 {
+  margin: 0 !important;  /* Using !important in your CSS rule gives it the highest specificity, which means it takes precedence over other conflicting styles, even if they are more specific or defined later in the stylesheet.
+
+When you added margin: 0 !important;, you essentially told the browser that no matter what other styles might be affecting the margin of the <h1> element, this rule should be applied without any consideration for specificity or the order of styles.
+
+While !important can be useful for overriding stubborn or hard-to-find conflicting styles, it's generally recommended to use it sparingly. Overusing !important can make your styles harder to manage and debug, as it can create unexpected behavior when working on larger projects or collaborating with others. It's best to rely on good CSS organization, specificity, and proper use of selectors whenever possible. */
+}
+
+b {
+  padding-left: 15px;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+header p {
+  width: 550px;
+  padding-left: 20px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 170px 170px 170px;
+  row-gap: 20px;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
+  margin-top: 100px;
+}
+
+@media(max-width: 590px) {
+  main {
+    grid-template-columns: 170px;
+  }
+  b {
+    font-size: 35px;
+  }
+  header p{ 
+    width: 480px;
+    font-size: 15px;
+  }
+  .vertical-line {
+    height: 182px;
+  }
+}
+
+@media(min-width: 591px) and (max-width: 700px) {
+  main {
+    grid-template-columns: 170px 170px;
+  }
+}
+
+.card-me,
+.card-mother,
+.card-father,
+.card-son,
+.card-daughter,
+.card-spouse {
+  display: grid;
+  place-items: center;
+  height: 200px;
+  background-color: rgb(1, 239, 239);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.09);
+  transition: all 0.15s ease;
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card-me:hover,
+.card-mother:hover,
+.card-father:hover,
+.card-son:hover,
+.card-daughter:hover,
+.card-spouse:hover {
+  scale: 1.1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.text {
+  align-self: end;
+  color: black;
+  font-weight: bold;
+}
+
+.card-me,
+.card-spouse {
+  background-image: url("../images/BP images/Self.svg");
+  background-size: 103px;
+}
+
+.card-mother {
+  background-image: url("../images/BP images/Mother.svg");
+  background-size: 85px;
+}
+
+.card-father {
+  background-image: url("../images/BP images/Father.svg");
+  background-size: 88px;
+}
+
+.card-daughter {
+  background-image: url("../images/BP images/Daughter.svg");
+  background-size: 130px;
+}
+
+.card-son {
+  background-image: url("../images/BP images/Son.svg");
+  background-size: 88px;
+}
+

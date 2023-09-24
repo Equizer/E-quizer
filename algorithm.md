@@ -1,0 +1,4 @@
+to delete one row of data we can do something like we will make a function that will genreate the html and then we can call it when someone adds data but when someone wants to deletes one row then call a function that generate the html again but this time when the row that is to be deleted does not gets printed here we can use continue key and to find out which row to delete we can use the table-data-${id} to find out as it hasa unique  number in the id and while looping to generate the html when the id is the one to delete we can use continue to avoid printing that row 
+
+
+1. the way we display the added data  is not that effective and it might be very complicated while trying to let user delete one row. maybe try to make an array and then push to that array and print it with a funtion that loops and print the array and then print the data and then some blank rows using the function generateRows().

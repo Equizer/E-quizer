@@ -1,0 +1,149 @@
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+}
+
+main {
+  background-color: rgb(33, 37, 41) !important;
+}
+
+
+.upper-section {
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  column-gap: 25px;
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.lower-section {
+  display: grid;
+  grid-template-columns: 300px 300px;
+  column-gap: 25px;
+  justify-content: center;
+
+}
+
+@media(max-width: 750px){
+  .upper-section {
+    grid-template-columns: 300px;
+    row-gap: 25px;
+  }
+  .lower-section {
+    grid-template-columns: 300px;
+    row-gap: 25px;
+  }
+}
+@media(min-width: 751px) and (max-width: 999px) {
+  .upper-section {
+    grid-template-columns: 300px 300px;
+    row-gap: 25px;
+  }
+  .lower-section {
+    grid-template-columns: 300px 300px;
+    row-gap: 25px;
+  }
+}
+
+@media(min-width: 1000px) {
+  .upper-section {
+    grid-template-columns: 300px 300px 300px;
+    column-gap: 25px;
+  }
+  .lower-section {
+    grid-template-columns: 300px 300px;
+    column-gap: 25px;
+  }
+}
+
+
+.card-weight,
+.card-bp,
+.card-sugar,
+.card-diabetes,
+.card-custom {
+  display: flex;
+  color: white;
+  height: 250px;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+
+
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+  transition: transform 0.3s ease, box-shadow 0.3s ease-out;
+
+}
+
+
+.card-weight:hover,
+.card-bp:hover,
+.card-sugar:hover,
+.card-diabetes:hover,
+.card-custom:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.4), 0 6px 20px 0 rgba(255, 255, 255, 0.39);
+}
+
+.card-text {
+  display: flex;
+  background-color: rgba(255, 243, 205, 0.8);
+  color: rgb(30, 48, 80);
+  width: 300px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.card-link {
+  text-decoration: none;
+  /* here we had to make a class for every anchor tags to remove the underline as we cannot just do  that on the whole div or span as it wouldnt work */
+  /* Chat GPT explaination: In this example, the .card-link class is applied to the anchor element. The text-decoration: none; rule removes the default underline from the anchor, ensuring that the text within the anchor does not have an underline.
+
+  It's important to follow proper HTML structure to ensure semantic and accessible markup. Always wrap your contents within a single anchor tag rather than nesting other block-level elements within the anchor. */
+}
+
+.icons {
+  width: 30px;
+  height: 24px;
+  margin-left: 3px;
+}
+
+
+.card-weight {
+  background-image: url("../images/cards images/weight.jpeg");
+}
+
+.card-bp {
+  background-image: url("../images/cards images/blood-pressure-issues-600x400.jpg");
+}
+
+.card-sugar {
+  background-image: url("../images/cards images/diabetes-vector-illustration-flat-tiny-sugar-level-blood-person-concept-high-persons-illness-treatment-insulin-injection-147633304.webp");
+}
+
+.card-diabetes {
+  background-image: url("../images/cards images/diabetes.jpeg");
+}
+
+.card-custom {
+  background-image: url("../images/cards images/customization-market-1.webp");
+}
+ 
+a{
+  text-decoration: none !important;
+}
+
+
+
+
+
+/* on hover make cards zoom in and make all of them have a shadow which would make the bg image look in the back  .on each card display card on a horizontal stripe which includes the option name */
